@@ -3,13 +3,15 @@ package com.cvaram.blog.controller;
 import com.cvaram.blog.beans.User;
 import com.cvaram.blog.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.annotations.Api;
+
 
 import java.util.List;
 
 @RequestMapping("/users")
 @RestController
+@Api(tags = "Users")
 public class UserController {
     @Autowired
     private UserService userService;
